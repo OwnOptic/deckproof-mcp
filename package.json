@@ -1,0 +1,66 @@
+{
+  "name": "deckproof-mcp",
+  "version": "0.1.0",
+  "description": "Create, validate, audit, and repair PowerPoint (.pptx) files against the real OOXML/ECMA-376 spec - bring your own company template and get spec-clean slides back. Fully local, no API keys.",
+  "type": "module",
+  "bin": {
+    "deckproof-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "start:http": "cross-env MCP_TRANSPORT=http PORT=3000 node dist/index.js",
+    "test": "npm run build && vitest run",
+    "test:watch": "vitest",
+    "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pptx",
+    "powerpoint",
+    "ooxml",
+    "ecma-376",
+    "presentation",
+    "slides",
+    "validation",
+    "ai-tools"
+  ],
+  "author": "Elliot Margot (OwnOptic)",
+  "license": "MIT",
+  "homepage": "https://github.com/OwnOptic/deckproof-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OwnOptic/deckproof-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OwnOptic/deckproof-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^5.2.1",
+    "fast-xml-parser": "^5.0.0",
+    "jszip": "^3.10.1",
+    "pptx-automizer": "^0.8.2",
+    "pptxgenjs": "^3.12.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "cross-env": "^7.0.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

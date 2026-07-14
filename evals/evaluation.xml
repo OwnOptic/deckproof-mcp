@@ -1,0 +1,48 @@
+<evaluation>
+  <!--
+    Evaluations for deckproof-mcp. Each question is independent, read-only (no
+    side effects that persist), and has a single stable answer verifiable by
+    string comparison. Answers reflect the shipped tool surface, rule set, and
+    layout catalog.
+  -->
+  <qa_pair>
+    <question>How many tools does the deckproof-mcp server expose?</question>
+    <answer>5</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>How many layout archetypes does pptx_list_layouts return (with no template supplied)?</question>
+    <answer>15</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>How many structural validation rules does deckproof-mcp check a .pptx against?</question>
+    <answer>14</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Which validation rule catches a slide relationship that exists but is not registered in the presentation's sldIdLst / notesMasterIdLst (the bug that makes files fail to open in Apple Keynote)?</question>
+    <answer>presentationIdLists</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Which underlying library does deckproof-mcp use to clone a template's existing slide as a stencil and refill it?</question>
+    <answer>pptx-automizer</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>In deckproof-mcp, is the `path` file input (reading a .pptx from a local disk path) allowed over the remote HTTP transport?</question>
+    <answer>no</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>When you call pptx_create_deck with a `template`, are the new slides inserted before or appended after the template's existing slides?</question>
+    <answer>appended</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>If you build a deck with pptx_create_deck that contains no pictures, what alt-text coverage percentage does pptx_audit report for it?</question>
+    <answer>100</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>What HTTP status code does the deckproof-mcp Streamable HTTP server return for a GET request to /mcp?</question>
+    <answer>405</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>What severity does the orphanedMedia validation rule report - error or warning?</question>
+    <answer>warning</answer>
+  </qa_pair>
+</evaluation>

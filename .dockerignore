@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.github
+*.log
+tests
+evals
+examples
+coverage
+*.md
+!README.md
