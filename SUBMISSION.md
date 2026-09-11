@@ -8,7 +8,7 @@ Submit at **https://mcpservers.org/submit** (free listing; skip the optional $39
 | **Short Description** | `Bring your own PowerPoint template - get spec-clean slides back. Creates, validates, audits, and repairs .pptx files against the real OOXML/ECMA-376 spec. Fully local, no API keys.` |
 | **Link (GitHub or docs)** | `https://github.com/OwnOptic/deckproof-mcp` |
 | **Category** | `Productivity`  *(alternative: `Development`)* |
-| **Contact Email** | `elliottus12@gmail.com`  *(or the professional `emargot@witivio.com` - your call)* |
+| **Contact Email** | `elliottus12@gmail.com` |
 
 ## Notes
 - Category rationale: it is a document-productivity tool (makes and fixes presentations). "Development" also fits (npm-distributed, OOXML/spec-focused) - pick whichever the reviewer's taxonomy prefers.
